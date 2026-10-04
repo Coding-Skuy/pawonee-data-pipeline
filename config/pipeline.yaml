@@ -1,0 +1,12 @@
+# Jadwal dan sumber pipa Pawonee.
+nama: pawonee-ke-pedaree
+jadwal: "*/15 * * * *"
+sumber:
+  database_url_env: DATABASE_URL
+  tabel: [resep, preferensi]
+keluaran:
+  topik: sinyal.pedaree.v1
+  tabel: sinyal_pedaree
+aturan:
+  wajib_validasi_skema: true
+  skema: ../pawonee-ai-models/models/schema.json
